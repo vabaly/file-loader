@@ -8,7 +8,9 @@ import {
 
 describe('loader', () => {
   it('should works without options', async () => {
+    // getComiler 是获取 webpack 生成的 compiler 对象
     const compiler = getCompiler('simple.js');
+    // compile 是执行 compiler.run 并返回 Promise
     const stats = await compile(compiler);
 
     expect(
